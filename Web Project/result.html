@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Quiz Result</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+
+<div class="result-container">
+    <h1>Quiz Results</h1>
+
+    <!-- User Score Section -->
+    <div class="score-section">
+        <p>Your Score: <span id="user-score">8</span> / <span id="total-questions">10</span></p>
+    </div>
+
+    <!-- Feedback Message Section -->
+    <div class="feedback-section">
+        <p id="feedback-message">🎉 Excellent! You did a great job!</p>
+    </div>
+
+    <!-- Quiz Summary -->
+    <div class="summary-section">
+        <h2>Quiz Summary</h2>
+        <ul id="summary-list">
+            <li>1. What is the capital of France? <strong>Your Answer: Paris ✅</strong></li>
+            <li>2. What is 2 + 2? <strong>Your Answer: 3 ❌ (Correct: 4)</strong></li>
+            <li>3. Who developed Python? <strong>Your Answer: Guido van Rossum ✅</strong></li>
+        </ul>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <a href="quiz.html" class="btn">🔄 Retake Quiz</a>
+        <a href="leaderboard.html" class="btn">🏆 View Leaderboard</a>
+        <a href="index.html" class="btn">🏠 Go Home</a>
+    </div>
+</div>
+
+</body>
+</html>

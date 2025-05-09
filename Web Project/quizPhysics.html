@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Quiz</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #F7EDE2, #F5CAC3);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            background: linear-gradient(120deg, #F5CAC3, #F6BD60);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #F6BD60;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 0 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #84A59D;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #F5CAC3;
+        }
+
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #F6BD60;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="quizName">Physics Quiz</h1>
+    <div class="container">
+        <form id="quizForm">
+            <div class="question">
+                <strong><p>What is the speed of light?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question1" value="option1"> 300,000 km/s</label>
+                    <label><input type="radio" name="question1" value="option2"> 150,000 km/s</label>
+                    <label><input type="radio" name="question1" value="option3"> 1,000 km/s</label>
+                    <label><input type="radio" name="question1" value="option4"> 10,000 km/s</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is Newton's First Law of Motion?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question2" value="option1"> An object in motion stays in motion</label>
+                    <label><input type="radio" name="question2" value="option2"> For every action, there is an equal reaction</label>
+                    <label><input type="radio" name="question2" value="option3"> F = ma</label>
+                    <label><input type="radio" name="question2" value="option4"> Gravity pulls objects down</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the unit of force?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question3" value="option1"> Joule</label>
+                    <label><input type="radio" name="question3" value="option2"> Newton</label>
+                    <label><input type="radio" name="question3" value="option3"> Pascal</label>
+                    <label><input type="radio" name="question3" value="option4"> Watt</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Who proposed the theory of relativity?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question4" value="option1"> Isaac Newton</label>
+                    <label><input type="radio" name="question4" value="option2"> Albert Einstein</label>
+                    <label><input type="radio" name="question4" value="option3"> Galileo Galilei</label>
+                    <label><input type="radio" name="question4" value="option4"> Nikola Tesla</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the formula for kinetic energy?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question5" value="option1"> KE = 1/2 mv²</label>
+                    <label><input type="radio" name="question5" value="option2"> KE = mv</label>
+                    <label><input type="radio" name="question5" value="option3"> KE = ma</label>
+                    <label><input type="radio" name="question5" value="option4"> KE = mgh</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the unit of electrical resistance?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question6" value="option1"> Ohm</label>
+                    <label><input type="radio" name="question6" value="option2"> Volt</label>
+                    <label><input type="radio" name="question6" value="option3"> Ampere</label>
+                    <label><input type="radio" name="question6" value="option4"> Coulomb</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the acceleration due to gravity on Earth?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question7" value="option1"> 9.8 m/s²</label>
+                    <label><input type="radio" name="question7" value="option2"> 8.9 m/s²</label>
+                    <label><input type="radio" name="question7" value="option3"> 10 m/s²</label>
+                    <label><input type="radio" name="question7" value="option4"> 9.0 m/s²</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What does a voltmeter measure?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question8" value="option1"> Voltage</label>
+                    <label><input type="radio" name="question8" value="option2"> Current</label>
+                    <label><input type="radio" name="question8" value="option3"> Resistance</label>
+                    <label><input type="radio" name="question8" value="option4"> Power</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the frequency of alternating current in most homes?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question9" value="option1"> 60 Hz</label>
+                    <label><input type="radio" name="question9" value="option2"> 50 Hz</label>
+                    <label><input type="radio" name="question9" value="option3"> 100 Hz</label>
+                    <label><input type="radio" name="question9" value="option4"> 120 Hz</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the SI unit of power?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question10" value="option1"> Watt</label>
+                    <label><input type="radio" name="question10" value="option2"> Joule</label>
+                    <label><input type="radio" name="question10" value="option3"> Newton</label>
+                    <label><input type="radio" name="question10" value="option4"> Ampere</label>
+                </div>
+            </div>
+
+            <button type="button" class="submit-button" onclick="calculateResult()">Submit</button>
+        </form>
+        <div id="result" class="result">Total Marks: <span id="marks">0</span></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            const answers = {
+                question1: "option1",
+                question2: "option1",
+                question3: "option2",
+                question4: "option2",
+                question5: "option1",
+                question6: "option1",
+                question7: "option1",
+                question8: "option1",
+                question9: "option1",
+                question10: "option1"
+            };
+
+            let score = 0;
+            const form = document.getElementById("quizForm");
+            for (const [key, value] of Object.entries(answers)) {
+                const selected = form.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === value) {
+                    score++;
+                }
+            }
+
+            document.getElementById("marks").textContent = score;
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+</body>
+</html>

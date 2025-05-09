@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Quiz</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #F7EDE2, #F5CAC3);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            background: linear-gradient(120deg, #F5CAC3, #F6BD60);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #F6BD60;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 0 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #84A59D;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #F5CAC3;
+        }
+
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #F6BD60;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="quizName">History Quiz</h1>
+    <div class="container">
+        <form id="quizForm">
+            <div class="question">
+                <strong><p>Who was the first President of the United States?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question1" value="option1"> George Washington</label>
+                    <label><input type="radio" name="question1" value="option2"> Abraham Lincoln</label>
+                    <label><input type="radio" name="question1" value="option3"> Thomas Jefferson</label>
+                    <label><input type="radio" name="question1" value="option4"> John Adams</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>When did World War II end?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question2" value="option1"> 1945</label>
+                    <label><input type="radio" name="question2" value="option2"> 1944</label>
+                    <label><input type="radio" name="question2" value="option3"> 1939</label>
+                    <label><input type="radio" name="question2" value="option4"> 1950</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Which ancient civilization built the pyramids?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question3" value="option1"> Egyptians</label>
+                    <label><input type="radio" name="question3" value="option2"> Mayans</label>
+                    <label><input type="radio" name="question3" value="option3"> Romans</label>
+                    <label><input type="radio" name="question3" value="option4"> Greeks</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Who discovered America in 1492?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question4" value="option1"> Christopher Columbus</label>
+                    <label><input type="radio" name="question4" value="option2"> Vasco da Gama</label>
+                    <label><input type="radio" name="question4" value="option3"> Ferdinand Magellan</label>
+                    <label><input type="radio" name="question4" value="option4"> Amerigo Vespucci</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What was the name of the ship that carried the Pilgrims to America?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question5" value="option1"> Mayflower</label>
+                    <label><input type="radio" name="question5" value="option2"> Santa Maria</label>
+                    <label><input type="radio" name="question5" value="option3"> Titanic</label>
+                    <label><input type="radio" name="question5" value="option4"> Beagle</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Which empire was ruled by Julius Caesar?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question6" value="option1"> Roman Empire</label>
+                    <label><input type="radio" name="question6" value="option2"> Ottoman Empire</label>
+                    <label><input type="radio" name="question6" value="option3"> Byzantine Empire</label>
+                    <label><input type="radio" name="question6" value="option4"> Persian Empire</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What was the name of the wall that separated East and West Berlin?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question7" value="option1"> Berlin Wall</label>
+                    <label><input type="radio" name="question7" value="option2"> Great Wall</label>
+                    <label><input type="radio" name="question7" value="option3"> Iron Curtain</label>
+                    <label><input type="radio" name="question7" value="option4"> Western Wall</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Which city was the capital of the Byzantine Empire?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question8" value="option1"> Constantinople</label>
+                    <label><input type="radio" name="question8" value="option2"> Athens</label>
+                    <label><input type="radio" name="question8" value="option3"> Rome</label>
+                    <label><input type="radio" name="question8" value="option4"> Alexandria</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Who was the British Prime Minister during World War II?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question9" value="option1"> Winston Churchill</label>
+                    <label><input type="radio" name="question9" value="option2"> Neville Chamberlain</label>
+                    <label><input type="radio" name="question9" value="option3"> Margaret Thatcher</label>
+                    <label><input type="radio" name="question9" value="option4"> Tony Blair</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>When did the American Civil War begin?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question10" value="option1"> 1861</label>
+                    <label><input type="radio" name="question10" value="option2"> 1865</label>
+                    <label><input type="radio" name="question10" value="option3"> 1845</label>
+                    <label><input type="radio" name="question10" value="option4"> 1870</label>
+                </div>
+            </div>
+
+            <button type="button" class="submit-button" onclick="calculateResult()">Submit</button>
+        </form>
+        <div id="result" class="result">Total Marks: <span id="marks">0</span></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            const answers = {
+                question1: "option1",
+                question2: "option1",
+                question3: "option1",
+                question4: "option1",
+                question5: "option1",
+                question6: "option1",
+                question7: "option1",
+                question8: "option1",
+                question9: "option1",
+                question10: "option1",
+            };
+
+            let score = 0;
+            const form = document.getElementById("quizForm");
+            for (const [key, value] of Object.entries(answers)) {
+                const selected = form.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === value) {
+                    score++;
+                }
+            }
+
+            document.getElementById("marks").textContent = score;
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+</body>
+</html>

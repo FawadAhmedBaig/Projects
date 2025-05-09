@@ -1,0 +1,528 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BBMS\\BBMS Solution VS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\bloodstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:bloodstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\bloodtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:bloodtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\bloodtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:bloodtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\bloodstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:bloodstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\viewpatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:viewpatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\viewdonors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:viewdonors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\viewdonors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:viewdonors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:donor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\donateblood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:donateblood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\donateblood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:donateblood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|D:\\BBMS\\BBMS Solution VS\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\viewpatients.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:viewpatients.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\viewdonors.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:viewdonors.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\donateblood.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:donateblood.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\bloodtransfer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:bloodtransfer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\bloodstock.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:bloodstock.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|d:\\bbms\\bbms solution vs\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A3E1BE0-7DDC-4C3A-BD0A-A521076B727E}|BBMS.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Patient.cs",
+              "RelativeDocumentMoniker": "Patient.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Patient.cs",
+              "RelativeToolTip": "Patient.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAA/wHQAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T12:14:50.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Patient.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Patient.cs",
+              "RelativeDocumentMoniker": "Patient.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Patient.cs [Design]",
+              "RelativeToolTip": "Patient.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T10:36:10.615Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:42:23.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BloodTransfer.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\BloodTransfer.cs",
+              "RelativeDocumentMoniker": "BloodTransfer.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\BloodTransfer.cs",
+              "RelativeToolTip": "BloodTransfer.cs",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAwwLYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:44:20.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:46:10.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BloodStock.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\BloodStock.cs",
+              "RelativeDocumentMoniker": "BloodStock.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\BloodStock.cs",
+              "RelativeToolTip": "BloodStock.cs",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAcwGQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:43:57.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Dashboard.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Dashboard.cs",
+              "RelativeToolTip": "Dashboard.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAADwv44AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:44:36.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ViewPatients.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\ViewPatients.cs",
+              "RelativeDocumentMoniker": "ViewPatients.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\ViewPatients.cs",
+              "RelativeToolTip": "ViewPatients.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAhwDAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:47:57.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ViewDonors.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\ViewDonors.cs",
+              "RelativeDocumentMoniker": "ViewDonors.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\ViewDonors.cs",
+              "RelativeToolTip": "ViewDonors.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAcwCIAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:47:44.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DonateBlood.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\DonateBlood.cs",
+              "RelativeDocumentMoniker": "DonateBlood.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\DonateBlood.cs",
+              "RelativeToolTip": "DonateBlood.cs",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAgwIoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:44:49.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Donor.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Donor.cs",
+              "RelativeDocumentMoniker": "Donor.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Donor.cs",
+              "RelativeToolTip": "Donor.cs",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAuwJwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:45:06.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAIAwwDsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:45:55.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdminLogin.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\AdminLogin.cs",
+              "RelativeDocumentMoniker": "AdminLogin.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\AdminLogin.cs",
+              "RelativeToolTip": "AdminLogin.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwDsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:34:03.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Splash.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Splash.cs",
+              "RelativeDocumentMoniker": "Splash.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Splash.cs",
+              "RelativeToolTip": "Splash.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAhwHQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T13:44:27.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ViewPatients.Designer.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\ViewPatients.Designer.cs",
+              "RelativeDocumentMoniker": "ViewPatients.Designer.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\ViewPatients.Designer.cs",
+              "RelativeToolTip": "ViewPatients.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:51:21.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DonateBlood.Designer.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\DonateBlood.Designer.cs",
+              "RelativeDocumentMoniker": "DonateBlood.Designer.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\DonateBlood.Designer.cs",
+              "RelativeToolTip": "DonateBlood.Designer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAswBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:50:46.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ViewDonors.Designer.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\ViewDonors.Designer.cs",
+              "RelativeDocumentMoniker": "ViewDonors.Designer.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\ViewDonors.Designer.cs",
+              "RelativeToolTip": "ViewDonors.Designer.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:51:15.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm.Designer.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAswBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:50:59.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "Login.Designer.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Login.Designer.cs",
+              "RelativeToolTip": "Login.Designer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAswBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:50:53.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BloodTransfer.Designer.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\BloodTransfer.Designer.cs",
+              "RelativeDocumentMoniker": "BloodTransfer.Designer.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\BloodTransfer.Designer.cs",
+              "RelativeToolTip": "BloodTransfer.Designer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAswBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:50:37.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "BloodStock.Designer.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\BloodStock.Designer.cs",
+              "RelativeDocumentMoniker": "BloodStock.Designer.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\BloodStock.Designer.cs",
+              "RelativeToolTip": "BloodStock.Designer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAYwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:49:10.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Employee.cs",
+              "RelativeDocumentMoniker": "Employee.cs",
+              "ToolTip": "D:\\BBMS\\BBMS Solution VS\\Employee.cs",
+              "RelativeToolTip": "Employee.cs",
+              "ViewState": "AQIAAO8AAAAAAAAAAAAcwAkBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:45:18.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T16:05:50.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Splash.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Splash.cs",
+              "RelativeDocumentMoniker": "Splash.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\Splash.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T13:38:26.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BloodTransfer.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\BloodTransfer.cs",
+              "RelativeDocumentMoniker": "BloodTransfer.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\BloodTransfer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T16:27:50.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Dashboard.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T16:54:38.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BloodStock.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\BloodStock.cs",
+              "RelativeDocumentMoniker": "BloodStock.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\BloodStock.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T08:50:24.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Donor.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Donor.cs",
+              "RelativeDocumentMoniker": "Donor.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\Donor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:55:59.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ViewDonors.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\ViewDonors.cs",
+              "RelativeDocumentMoniker": "ViewDonors.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\ViewDonors.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T16:06:10.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DonateBlood.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\DonateBlood.cs",
+              "RelativeDocumentMoniker": "DonateBlood.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\DonateBlood.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:21:13.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:39:33.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AdminLogin.cs [Design]",
+              "DocumentMoniker": "D:\\BBMS\\BBMS Solution VS\\AdminLogin.cs",
+              "RelativeDocumentMoniker": "AdminLogin.cs",
+              "ToolTip": "E:\\BBMS\\BBMS Solution VS\\AdminLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:34:00.667Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

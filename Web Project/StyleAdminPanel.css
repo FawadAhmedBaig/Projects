@@ -1,0 +1,96 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F7EDE2; /* Cream */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .admin-panel {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  header {
+    background-color: #F6BD60; /* Yellow-orange */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #84A59D; /* Sage green */
+  }
+  
+  nav button {
+    background-color: #F28482; /* Coral */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav button:hover {
+    background-color: #F5CAC3; /* Soft pink */
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form textarea,
+  form input,
+  form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #84A59D; /* Sage green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #F28482; /* Coral */
+  }
+  
+  #questions-list {
+    background: #F7EDE2; /* Cream */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  

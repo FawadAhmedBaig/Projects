@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="StyleLogin.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1><br>
+      <form method="post" action="DBcheckLoginDetails.php">
+        <div class="slider-container">
+          <label class="toggle-switch">
+              <input type="checkbox" id="roleSwitch" name="user_role" value="student">
+              <span class="slider"></span>
+          </label>
+          <span id="roleLabel">Student</span>
+      </div>
+      <input type="hidden" id="roleValue" name="user_role" value="student">
+        <div class="txt_field">
+          <input type="email" required name = "txtEmail">
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required name = "txtPassword">
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="SignupForm.html">Sign up</a>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

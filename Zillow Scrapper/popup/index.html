@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestorList Scraper</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./xlsx.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <form action=""> -->
+            <header>
+                <h1 style="display: flex; align-items:center"> <img src="/images/zillow_512.png" alt=""> Zillow Scraper </h1>
+
+            </header>
+
+
+
+            <fieldset>
+
+                <div style="margin-bottom: 5px;">
+                    <span style="font-size:medium;"> <span id="text" style="font-size:medium;">Successfully Scraped Data
+                        </span> <span id="success">0</span></span>
+                </div>
+
+            </fieldset>
+            <div class="button_field">
+                <button id="start_button" class="button-37">Start Scraping</button>
+                <button id="stop_button" class="button-37" disabled>Stop</button>
+            </div>
+            <div>
+                <button id="download_csv_button" class="button-37">Download CSV</button>
+                <button id="download_excel_button" class="button-37">Download Excel Sheet</button>
+            </div>
+
+            <!-- </form> -->
+        </div>
+    </div>
+    <script src="./popup.js"></script>
+</body>
+
+</html>

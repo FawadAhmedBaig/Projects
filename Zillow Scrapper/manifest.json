@@ -1,0 +1,36 @@
+{
+    "name": "Zillow Scraper FB",
+    "description": "Data Scraping Extension by Fawad Baig",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["cookies", "storage", "unlimitedStorage", "activeTab", "tabs"],
+    "action": {
+        "default_popup": "/popup/index.html",
+        "icons": {
+            "16": "/images/zillow_16.png",
+            "32": "/images/zillow_32.png",
+            "48": "/images/zillow_48.png",
+            "64": "/images/zillow_64.png",
+            "128": "/images/zillow_128.png",
+            "512": "/images/zillow_512.png"
+        }
+    },
+    
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "js": ["content.js", "./xlsx.js"],
+        "matches": ["https://www.zillow.com/myzillow/favorites"],
+        "run_at": "document_end"
+    }],
+    
+    "icons": {
+        "16": "/images/zillow_16.png",
+        "32": "/images/zillow_32.png",
+        "48": "/images/zillow_48.png",
+        "64": "/images/zillow_64.png",
+        "128": "/images/zillow_128.png",
+        "512": "/images/zillow_512.png"
+    }
+}

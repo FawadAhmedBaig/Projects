@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <Style>
+            body{
+                background: linear-gradient(120deg,#F7EDE2,#F5CAC3);
+                background-color: #F7EDE2;
+                margin:4px;
+                padding: 4px;
+            }
+            .container{
+            max-width: 600px;
+            margin: 20px auto;
+            
+            padding: 20px;
+            border-radius: 8px;
+            background-color: transparent;
+            
+            }
+            .options label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            }
+            .question{
+                background: linear-gradient(120deg,#F5CAC3,#F6BD60);
+                border: 2px;
+                border-radius: 6px;
+                background-blend-mode: lighten;
+                
+                margin-bottom: 20px;
+            }
+            p{
+                text-align: left;
+            }
+            .question1{
+              
+              border-radius: 6;
+              border: 4px; 
+
+            }
+            .Submitbutton{
+                width: 100%;
+                display: block;
+                padding: 10px;
+                background-color:#84A59D ;
+                color:#FFFF;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                text-align: center;
+
+            }
+            .Submitbutton:hover{
+                background-color:#F5CAC3 ;
+            }
+            .result{
+                display: none;
+                margin-top:20px;
+                padding: 10px;
+                background-color: aqua;
+                border: 1px solid #F6BD60;
+                border-radius: 6px;
+                color: aquamarine;
+            }
+            Form{
+                border-radius: 6px;
+                opacity: calc(#F5CAC3,#F6BD60);
+            }
+            h1{
+                color: #F6BD60;
+            }
+        </Style>
+    </head>
+    <body >
+        <center><h1 id="QuizName">Physics quiz1</h1></center>
+        <div class="container">
+            <form id="quizForm" >
+                <div class="Question" >
+                    <strong><p>Ask a question</p></strong>
+                    <div class="options">
+                        <label><input type="radio" id="option" name="Question1" value="Q1option1">Hello</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option2">Hey</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option3">Bye</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option4">Goodbye</label>
+                        <br>
+                    </div>
+                </div>
+                <div class="Question" >
+                    <strong><p>Ask a question</p></strong>
+                    <div class="option">
+                        <label><input type="radio" id="option" name="Question1" value="Q1option1">Hello</label><br>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option2">Hey</label><br>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option3">Bye</label><br>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option4">Goodbye</label>
+                        <br>
+                    </div>
+                </div>
+                <div class="Question" >
+                    <strong><p>Ask a question</p></strong>
+                    <div class="options">
+                        <label><input type="radio" id="option" name="Question1" value="Q1option1">Hello</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option2">Hey</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option3">Bye</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option4">Goodbye</label>
+                        <br>
+                    </div>
+                </div>
+                <div class="Question" >
+                    <strong><p>Ask a question</p></strong>
+                    <div class="options">
+                        <label><input type="radio" id="option" name="Question1" value="Q1option1">Hello</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option2">Hey</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option3">Bye</label>
+                        <label><input type="radio" id="option" name="Question1" value="Q1option4">Goodbye</label>
+                        <br>
+                    </div>
+                </div>
+                <button type="button" class="Submitbutton">Submit</button>
+            </Form>
+            <div id="result" class="result">Total Marks:</div>
+        </div>    
+    </body>
+</html>
