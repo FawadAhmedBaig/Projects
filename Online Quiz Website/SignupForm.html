@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel = "stylesheet" href="StyleLogin.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Sign Up</h1><br>
+      <form method="POST" action="DBinsertLoginDetails.php" name = "frmSingUp">
+        <div class="slider-container">
+          <label class="toggle-switch">
+              <input type="checkbox" id="roleSwitch" name="user_role" value="student">
+              <span class="slider"></span>
+          </label>
+          <span id="roleLabel">Student</span>
+      </div>
+      <input type="hidden" id="roleValue" name="user_role" value="student">
+        <div class="txt_field">
+          <input type="text" required name = "txtName">
+          <span></span>
+          <label>Name</label>
+        </div>
+        <div class="txt_field">
+          <input type="email" required name = "txtEmail">
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required name = "txtPassword">
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Confirm Password</label>
+        </div>
+        <input type="submit" value="Sign Up">
+        <div class="signup_link">
+          Already Registered? <a href="LoginForm.html">Login</a>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

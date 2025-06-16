@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F7EDE2; /* Light cream background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.result-container {
+    width: 90%; /* Adjusts to fit full screen */
+    max-width: 1200px; /* Limit width on larger screens */
+    height: 90%; /* Full-screen height minus small padding */
+    background-color: #FFFFFF; /* White container background for contrast */
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Header Section */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #F28482; /* Coral pink heading */
+    text-align: center;
+}
+
+/* Score Section */
+.score-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.score-section p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #F6BD60; /* Warm yellow for the score text */
+}
+
+/* Feedback Section */
+.feedback-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.feedback-section p {
+    font-size: 1.5rem;
+    color: #F5CAC3; /* Soft pink for feedback message */
+    font-style: italic;
+}
+
+/* Summary Section */
+.summary-section {
+    flex-grow: 1; /* Fills the available space */
+    overflow-y: auto; /* Scrolls if content overflows */
+    padding: 20px;
+    background-color: #F7EDE2; /* Soft background for the summary section */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.summary-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #84A59D; /* Soft green heading */
+}
+
+.summary-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.summary-section li {
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #F6BD60; /* Warm yellow for summary items */
+    color: #333;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Buttons Section */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: #F28482; /* Coral pink for buttons */
+    color: #FFFFFF;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    min-width: 200px;
+}
+
+.btn:hover {
+    background-color: #F5CAC3; /* Light pink hover state */
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

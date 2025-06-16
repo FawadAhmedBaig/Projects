@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #F7EDE2, #F5CAC3);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            background: linear-gradient(120deg, #F5CAC3, #F6BD60);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #F6BD60;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 0 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #84A59D;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #F5CAC3;
+        }
+
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #F6BD60;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="quizName">General Knowledge Quiz</h1>
+    <div class="container">
+        <form id="quizForm">
+            <div class="question">
+                <strong><p>What is the capital of France?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question1" value="option1"> Paris</label>
+                    <label><input type="radio" name="question1" value="option2"> Rome</label>
+                    <label><input type="radio" name="question1" value="option3"> Berlin</label>
+                    <label><input type="radio" name="question1" value="option4"> Madrid</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Which planet is known as the Red Planet?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question2" value="option1"> Mars</label>
+                    <label><input type="radio" name="question2" value="option2"> Jupiter</label>
+                    <label><input type="radio" name="question2" value="option3"> Saturn</label>
+                    <label><input type="radio" name="question2" value="option4"> Venus</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Who wrote "Romeo and Juliet"?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question3" value="option1"> William Shakespeare</label>
+                    <label><input type="radio" name="question3" value="option2"> Charles Dickens</label>
+                    <label><input type="radio" name="question3" value="option3"> Jane Austen</label>
+                    <label><input type="radio" name="question3" value="option4"> Mark Twain</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the largest ocean on Earth?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question4" value="option1"> Pacific Ocean</label>
+                    <label><input type="radio" name="question4" value="option2"> Atlantic Ocean</label>
+                    <label><input type="radio" name="question4" value="option3"> Indian Ocean</label>
+                    <label><input type="radio" name="question4" value="option4"> Arctic Ocean</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the chemical symbol for water?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question5" value="option1"> H<sub>2</sub>O</label>
+                    <label><input type="radio" name="question5" value="option2"> CO<sub>2</sub></label>
+                    <label><input type="radio" name="question5" value="option3"> O<sub>2</sub></label>
+                    <label><input type="radio" name="question5" value="option4"> NaCl</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Who painted the Mona Lisa?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question6" value="option1"> Leonardo da Vinci</label>
+                    <label><input type="radio" name="question6" value="option2"> Vincent van Gogh</label>
+                    <label><input type="radio" name="question6" value="option3"> Pablo Picasso</label>
+                    <label><input type="radio" name="question6" value="option4"> Claude Monet</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the smallest unit of life?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question7" value="option1"> Cell</label>
+                    <label><input type="radio" name="question7" value="option2"> Atom</label>
+                    <label><input type="radio" name="question7" value="option3"> Molecule</label>
+                    <label><input type="radio" name="question7" value="option4"> Organ</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Which country is known as the Land of the Rising Sun?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question8" value="option1"> Japan</label>
+                    <label><input type="radio" name="question8" value="option2"> China</label>
+                    <label><input type="radio" name="question8" value="option3"> South Korea</label>
+                    <label><input type="radio" name="question8" value="option4"> Thailand</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>What is the square root of 64?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question9" value="option1"> 8</label>
+                    <label><input type="radio" name="question9" value="option2"> 7</label>
+                    <label><input type="radio" name="question9" value="option3"> 6</label>
+                    <label><input type="radio" name="question9" value="option4"> 9</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <strong><p>Which element has the chemical symbol "O"?</p></strong>
+                <div class="options">
+                    <label><input type="radio" name="question10" value="option1"> Oxygen</label>
+                    <label><input type="radio" name="question10" value="option2"> Gold</label>
+                    <label><input type="radio" name="question10" value="option3"> Silver</label>
+                    <label><input type="radio" name="question10" value="option4"> Hydrogen</label>
+                </div>
+            </div>
+
+            <button type="button" class="submit-button" onclick="calculateResult()">Submit</button>
+        </form>
+        <div id="result" class="result">Total Marks: <span id="marks">0</span></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+            const answers = {
+                question1: "option1",
+                question2: "option1",
+                question3: "option1",
+                question4: "option1",
+                question5: "option1",
+                question6: "option1",
+                question7: "option1",
+                question8: "option1",
+                question9: "option1",
+                question10: "option1",
+            };
+
+            let score = 0;
+            const form = document.getElementById("quizForm");
+            for (const [key, value] of Object.entries(answers)) {
+                const selected = form.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === value) {
+                    score++;
+                }
+            }
+
+            document.getElementById("marks").textContent = score;
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+</body>
+</html>

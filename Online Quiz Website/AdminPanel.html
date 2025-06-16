@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Admin Panel</title>
+  <link rel="stylesheet" href="StyleAdminPanel.css">
+</head>
+<body>
+  <div class="admin-panel">
+    <header>
+      <h1>Quiz Admin Panel</h1>
+    </header>
+    <nav>
+      <button id="add-question-btn">Add Question</button>
+      <button id="manage-questions-btn">Manage Questions</button>
+    </nav>
+    <main>
+      <section id="add-question-section" class="hidden">
+        <h2>Add a New Question</h2>
+        <form id="add-question-form" action="DBaddEditQuestions.php" method="post">
+          <label for="question">Question:</label>
+          <textarea id="question" name="question" rows="3" required></textarea>
+
+          <label for="option1">Option 1:</label>
+          <input type="text" id="option1" name="option1" required>
+
+          <label for="option2">Option 2:</label>
+          <input type="text" id="option2" name="option2" required>
+
+          <label for="option3">Option 3:</label>
+          <input type="text" id="option3" name="option3" required>
+
+          <label for="option4">Option 4:</label>
+          <input type="text" id="option4" name="option4" required>
+
+          <label for="correct-answer">Correct Answer:</label>
+          <select id="correct-answer" name="correct-answer" required>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+          </select>
+
+          <button type="submit">Save Question</button>
+        </form>
+      </section>
+      <section id="manage-questions-section" class="hidden">
+        <h2>Manage Questions</h2>
+        <div id="questions-list"></div>
+      </section>
+    </main>
+  </div>
+  <script src="AdminPanelScirpt.js"></script>
+</body>
+</html>

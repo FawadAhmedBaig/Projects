@@ -1,0 +1,223 @@
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\BBMS.exe
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\BBMS.deps.json
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\BBMS.runtimeconfig.json
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\BBMS.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\BBMS.pdb
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\Guna.UI2.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\System.Management.dll
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.AssemblyReference.cache
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.Properties.Resources.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.GenerateResource.cache
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.AssemblyInfoInputs.cache
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.AssemblyInfo.cs
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.CoreCompileInputs.cache
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.dll
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\refint\BBMS.dll
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.pdb
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.genruntimeconfig.cache
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\ref\BBMS.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\Bunifu.Licensing.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\Bunifu.UI.WinForms.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\FontsInstaller.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\RestSharp.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.Login.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.Splash.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.MainForm.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.Donor.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.Patient.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.ViewDonors.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.ViewPatients.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.BloodStock.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.BloodTransfer.resources
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.Dashboard.resources
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Visual Prograamming\BBMS\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.Up2Date
+D:\Visual Prograamming\BBMS\obj\Debug\net8.0-windows\BBMS.DonateBlood.resources
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\BBMS.exe
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\BBMS.deps.json
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\BBMS.runtimeconfig.json
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\BBMS.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\BBMS.pdb
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\Bunifu.Licensing.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\Bunifu.UI.WinForms.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\FontsInstaller.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\Guna.UI2.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\RestSharp.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\System.CodeDom.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\shahb\Desktop\project\BBMS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.AssemblyReference.cache
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.BloodStock.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.BloodTransfer.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.Dashboard.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.DonateBlood.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.Donor.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.Login.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.MainForm.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.Patient.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.Properties.Resources.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.Splash.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.ViewDonors.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.ViewPatients.resources
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.GenerateResource.cache
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.AssemblyInfoInputs.cache
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.AssemblyInfo.cs
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.CoreCompileInputs.cache
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.Up2Date
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.dll
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\refint\BBMS.dll
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.pdb
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.genruntimeconfig.cache
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\ref\BBMS.dll
+C:\Users\shahb\Desktop\project\BBMS\obj\Debug\net8.0-windows\BBMS.Employee.resources
+E:\BBMS\bin\Debug\net8.0-windows\BBMS.exe
+E:\BBMS\bin\Debug\net8.0-windows\BBMS.deps.json
+E:\BBMS\bin\Debug\net8.0-windows\BBMS.runtimeconfig.json
+E:\BBMS\bin\Debug\net8.0-windows\BBMS.dll
+E:\BBMS\bin\Debug\net8.0-windows\BBMS.pdb
+E:\BBMS\bin\Debug\net8.0-windows\Bunifu.Licensing.dll
+E:\BBMS\bin\Debug\net8.0-windows\Bunifu.UI.WinForms.dll
+E:\BBMS\bin\Debug\net8.0-windows\FontsInstaller.dll
+E:\BBMS\bin\Debug\net8.0-windows\Guna.UI2.dll
+E:\BBMS\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+E:\BBMS\bin\Debug\net8.0-windows\RestSharp.dll
+E:\BBMS\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+E:\BBMS\bin\Debug\net8.0-windows\System.Management.dll
+E:\BBMS\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+E:\BBMS\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+E:\BBMS\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+E:\BBMS\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\BBMS\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\BBMS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.AssemblyReference.cache
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.BloodStock.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.BloodTransfer.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.Dashboard.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.DonateBlood.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.Donor.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.Employee.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.Login.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.MainForm.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.Patient.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.Properties.Resources.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.Splash.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.ViewDonors.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.ViewPatients.resources
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.GenerateResource.cache
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.GeneratedMSBuildEditorConfig.editorconfig
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.AssemblyInfoInputs.cache
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.AssemblyInfo.cs
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.CoreCompileInputs.cache
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.Up2Date
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.dll
+E:\BBMS\obj\Debug\net8.0-windows\refint\BBMS.dll
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.pdb
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.genruntimeconfig.cache
+E:\BBMS\obj\Debug\net8.0-windows\ref\BBMS.dll
+E:\BBMS\obj\Debug\net8.0-windows\BBMS.AdminLogin.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.AssemblyReference.cache
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.AdminLogin.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.BloodStock.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.BloodTransfer.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.Dashboard.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.DonateBlood.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.Donor.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.Employee.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.Login.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.MainForm.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.Patient.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.Properties.Resources.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.Splash.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.ViewDonors.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.ViewPatients.resources
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.GenerateResource.cache
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.GeneratedMSBuildEditorConfig.editorconfig
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.AssemblyInfoInputs.cache
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.AssemblyInfo.cs
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.CoreCompileInputs.cache
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.dll
+E:\Latest\BBMS\obj\Debug\net8.0-windows\refint\BBMS.dll
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.pdb
+E:\Latest\BBMS\bin\Debug\net8.0-windows\BBMS.exe
+E:\Latest\BBMS\bin\Debug\net8.0-windows\BBMS.deps.json
+E:\Latest\BBMS\bin\Debug\net8.0-windows\BBMS.runtimeconfig.json
+E:\Latest\BBMS\bin\Debug\net8.0-windows\BBMS.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\BBMS.pdb
+E:\Latest\BBMS\bin\Debug\net8.0-windows\Bunifu.Licensing.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\Bunifu.UI.WinForms.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\FontsInstaller.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\Guna.UI2.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\RestSharp.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\System.Management.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Latest\BBMS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.csproj.Up2Date
+E:\Latest\BBMS\obj\Debug\net8.0-windows\BBMS.genruntimeconfig.cache
+E:\Latest\BBMS\obj\Debug\net8.0-windows\ref\BBMS.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\BBMS.exe
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\BBMS.deps.json
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\BBMS.runtimeconfig.json
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\BBMS.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\BBMS.pdb
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\Bunifu.Licensing.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\Bunifu.UI.WinForms.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\FontsInstaller.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\Guna.UI2.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\RestSharp.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\System.Management.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\BBMS\BBMS Solution VS\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.csproj.AssemblyReference.cache
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.AdminLogin.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.BloodStock.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.BloodTransfer.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.Dashboard.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.DonateBlood.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.Donor.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.Employee.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.Login.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.MainForm.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.Patient.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.Properties.Resources.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.Splash.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.ViewDonors.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.ViewPatients.resources
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.csproj.GenerateResource.cache
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.GeneratedMSBuildEditorConfig.editorconfig
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.AssemblyInfoInputs.cache
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.AssemblyInfo.cs
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.csproj.CoreCompileInputs.cache
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.csproj.Up2Date
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.dll
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\refint\BBMS.dll
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.pdb
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\BBMS.genruntimeconfig.cache
+E:\BBMS\BBMS Solution VS\obj\Debug\net8.0-windows\ref\BBMS.dll

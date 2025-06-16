@@ -1,0 +1,35 @@
+{
+    "name": "FB Auto Uploader",
+    "version": "1.2",
+    "manifest_version": 3,
+    "permissions": ["storage", "tabs"],
+    "action": {
+        "default_popup": "/Popup/index.html",
+        "default_icons":{
+            "16": "/images/upload_16.png",
+            "32": "/images/upload_32.png",
+            "48": "/images/upload_48.png",
+            "64": "/images/upload_64.png",
+            "128": "/images/upload_128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/upload_16.png",
+        "32": "/images/upload_32.png",
+        "48": "/images/upload_48.png",
+        "64": "/images/upload_64.png",
+        "128": "/images/upload_128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["https://www.facebook.com/*"],
+        "js": ["content.js", "xlsx.js", "automationFunctions.js"],
+        "run_at": "document_idle"
+    }],
+    "web_accessible_resources": [{
+        "matches": ["https://www.facebook.com/*"],
+        "resources": ["Video_Data.xlsx", "/Videos/*"]
+    }]
+}

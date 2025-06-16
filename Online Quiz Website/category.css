@@ -1,0 +1,114 @@
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F7EDE2; /* Cream background */
+}
+
+h1 {
+    text-align: center;
+    color: #F28482; /* Coral pink */
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #F6BD60, #F5CAC3);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #F28482 20%, transparent 50%);
+    transform: rotate(45deg);
+    opacity: 0.15;
+}
+
+.category-card .icon {
+    font-size: 4rem;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.category-card .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Specific Colors for Cards */
+.category-card:nth-child(1) {
+    background: linear-gradient(145deg, #F6BD60, #F28482);
+}
+
+.category-card:nth-child(2) {
+    background: linear-gradient(145deg, #84A59D, #F5CAC3);
+}
+
+.category-card:nth-child(3) {
+    background: linear-gradient(145deg, #F28482, #F5CAC3);
+}
+
+.category-card:nth-child(4) {
+    background: linear-gradient(145deg, #84A59D, #F6BD60);
+}
+
+/* Link Styling */
+.category-card a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .category-card .icon {
+        font-size: 3rem;
+    }
+    .category-card .title {
+        font-size: 1.2rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #84A59D; /* Greenish Teal */
+    color: #F7EDE2; /* Cream */
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
