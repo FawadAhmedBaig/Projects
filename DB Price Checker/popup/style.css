@@ -1,0 +1,129 @@
+h1,
+.switch-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700; /* Bold */
+}
+.footer {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; /* Regular */
+  margin-top: 20px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 340px;
+  max-width: 90%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.header-row img {
+  width: 48px;
+  height: 48px;
+  image-rendering: auto;
+  image-rendering: -webkit-optimize-contrast; /* for Chrome */
+  image-rendering: crisp-edges;
+}
+
+
+
+h1 {
+  font-size: 22px;
+  color: #1f2937;
+  margin: 0;
+  white-space: nowrap;
+}
+
+
+.switch-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.switch-label {
+  font-size: 14px;
+  color: #374151;
+  flex: 1;
+  margin-right: 10px;
+  text-align: left;
+}
+
+
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+  margin: 10px auto;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #f44336; /* Red by default */
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px; width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Turn slider green when checked */
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+.footer {
+  margin-top: 24px;
+  font-size: 12px;
+  color: #6b7280;
+}
