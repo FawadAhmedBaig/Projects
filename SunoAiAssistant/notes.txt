@@ -1,0 +1,85 @@
+document.querySelectorAll('div[role="tabpanel"] a[title]') 
+
+from 0
+
+from 1
+document.querySelectorAll('div.group.flex.w-40.flex-col.items-center')[1].style.display = "none"
+
+
+document.querySelectorAll('div.group.flex.w-40.flex-col.items-center')
+  .forEach(card => {
+    const title = card.querySelector('a[title]');
+    if (title && title.textContent.trim().toLowerCase() === 'dragon') {
+      card.style.display = 'none';
+    }
+  });
+
+  // content.js
+(function () {
+  // Helper: detect popup
+  function detectAddToPlaylistPopup() {
+    const popup = [...document.querySelectorAll('span.font-serif')]
+      .find(el => el.textContent.trim() === 'Add to Playlist');
+
+    if (popup) {
+      const container = popup.closest('div.h-full.w-full.p-6');
+      if (container && !container.querySelector('#playlist-search-input')) {
+        injectSearchBar(container);
+      }
+    }
+  }
+
+  // Helper: inject search bar
+  function injectSearchBar(container) {
+    const searchBar = document.createElement('input');
+    searchBar.id = 'playlist-search-input';
+    searchBar.placeholder = 'Search playlist...';
+    searchBar.style.cssText = `
+      width: 100%;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 14px;
+      outline: none;
+    `;
+
+    const target = container.querySelector('.mb-4.max-h-\\[400px\\].overflow-y-auto');
+    if (target) {
+      target.parentElement.insertBefore(searchBar, target);
+      attachSearchLogic(searchBar, target);
+    }
+  }
+
+  // Helper: search filtering
+  function attachSearchLogic(input, target) {
+    input.addEventListener('input', () => {
+      const term = input.value.trim().toLowerCase();
+      const items = target.querySelectorAll('div[class*="cursor-pointer"][class*="rounded-md"]');
+
+      items.forEach(item => {
+        const nameEl = item.querySelector('div.font-sans');
+        const name = nameEl ? nameEl.textContent.trim().toLowerCase() : '';
+        item.style.display = name.includes(term) ? '' : 'none';
+      });
+    });
+  }
+
+  // Use MutationObserver to detect when the dialog appears dynamically
+  const observer = new MutationObserver(() => detectAddToPlaylistPopup());
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Initial check (in case already open)
+  detectAddToPlaylistPopup();
+})();
+
+
+https://studio-api.prod.suno.com/api/billing/clips/48473db5-7b8e-461b-9ffd-de0c99636fd2/download/
+
+
+document.querySelectorAll('div[data-testid="song-row"]')[1].getAttribute('data-clip-id')
+
+
+if i want this extension to work for everyone on which pc it is run then it is only for my brower or account or pc but if for others then? and also 

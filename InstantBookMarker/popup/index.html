@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+    }
+    body { 
+      width: 340px; 
+      padding: 20px; 
+      font-family: 'Inter', -apple-system, sans-serif; 
+      background: #ffffff;
+      color: #1e293b;
+    }
+    h3 { margin-top: 0; font-size: 1.1rem; color: #0f172a; }
+    
+    .input-group { margin-bottom: 16px; }
+    label { display: block; font-size: 0.75rem; font-weight: 600; color: #64748b; margin-bottom: 4px; text-transform: uppercase; }
+    
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    textarea:focus, input:focus { border-color: var(--primary); }
+    textarea { height: 70px; resize: none; }
+
+    .category-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 20px; }
+    .cat-btn {
+      padding: 8px 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      cursor: pointer;
+      color: #475569;
+    }
+    .cat-btn.active-cat {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .actions { display: flex; gap: 10px; margin-top: 10px; }
+    .btn-main {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    #save { background: var(--primary); color: white; }
+    #save:hover { background: var(--primary-hover); }
+    #viewDash { background: transparent; border: 1px solid #e2e8f0; color: #64748b; margin-top: 15px; width: 100%; }
+    
+    .ai-loader {
+      font-size: 0.7rem;
+      color: var(--primary);
+      display: none;
+      margin-top: -12px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Save Content</h3>
+  
+  <div class="input-group">
+    <label>Title</label>
+    <!-- <div id="aiLoading" class="ai-loader">AI is analyzing text...</div> -->
+    <textarea id="extractedText" placeholder="Event name..."></textarea>
+  </div>
+  
+  <div class="input-group">
+    <label>Location</label>
+    <input type="text" id="locationField" placeholder="Where is it happening?">
+  </div>
+
+  <div class="input-group">
+    <label>Date</label>
+    <input type="date" id="eventDate">
+  </div>
+
+  <label>Save As</label>
+  <div class="category-row">
+    <button id="addEvent" class="cat-btn active-cat">Event</button>
+    <button id="addTask" class="cat-btn">Task</button>
+    <button id="addTop3" class="cat-btn">Top 3</button>
+  </div>
+
+  <div class="actions">
+    <button id="cancel" class="btn-main" style="background: #f8fafc; color: #64748b;">Cancel</button>
+    <button id="save" class="btn-main">Save to Storage</button>
+  </div>
+
+  <button id="viewDash" class="btn-main">Open Dashboard</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

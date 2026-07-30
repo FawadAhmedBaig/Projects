@@ -1,0 +1,5 @@
+
+// document.querySelector('div[data-view-name="profile-top-card-verified-badge"] div[role="button"] p')
+// document.querySelectorAll('p')[4]
+// document.querySelector('[data-view-name="profile-shared-connections"] a').click()
+// document.querySelectorAll('ul[role="list"] li  span[dir="ltr"] span')

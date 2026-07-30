@@ -1,0 +1,12 @@
+import NextAuth from "next-auth";
+import { authConfig } from "@/lib/auth.config";
+
+// Use lightweight auth config for Edge middleware (no MongoDB)
+export default NextAuth(authConfig).auth;
+
+export const config = {
+  // We added "api/uploadthing" to the exclusion list (the part inside the first group)
+  matcher: [
+    "/((?!api/uploadthing|_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)"
+  ],
+};

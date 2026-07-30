@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Warm Intro Router (Side Panel)",
+  "version": "0.6",
+  "description": "Manage warm intros on LinkedIn using Chrome Side Panel (local-only).",
+  "permissions": ["storage", "scripting", "tabs", "sidePanel", "activeTab"],
+  "host_permissions": ["https://www.linkedin.com/in/*", "https://www.linkedin.com/search/results/people/?connectionOf=*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "author": "Fawad Baig",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Warm Intro Router",
+    "default_icon": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+
+    }
+  },
+   "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    }
+}

@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiverr Brief Proposal Architect Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ══════════════════════════════════════════════
+       DESIGN TOKENS
+       ══════════════════════════════════════════════ */
+    :root {
+      /* Surfaces */
+      --bg-primary:    #0b0e14;
+      --bg-secondary:  #111620;
+      --bg-card:       #161b27;
+      --bg-elevated:   #1c2233;
+      --bg-input:      #0f1319;
+
+      /* Borders */
+      --border-subtle:  rgba(255, 255, 255, 0.06);
+      --border-default: rgba(255, 255, 255, 0.10);
+      --border-focus:   rgba(30, 190, 120, 0.50);
+
+      /* Text */
+      --text-primary:   #e8ecf4;
+      --text-secondary: #8892a6;
+      --text-muted:     #565f73;
+      --text-inverse:   #0b0e14;
+
+      /* Accent — Fiverr-inspired green */
+      --accent:         #1dbf73;
+      --accent-hover:   #19a863;
+      --accent-glow:    rgba(29, 191, 115, 0.25);
+      --accent-subtle:  rgba(29, 191, 115, 0.08);
+
+      /* Pro gradient */
+      --pro-gradient:   linear-gradient(135deg, #6c5ce7, #a855f7, #ec4899);
+
+      /* Status */
+      --success:  #1dbf73;
+      --warning:  #f0b429;
+      --danger:   #ef4444;
+      --info:     #3b82f6;
+
+      /* Typography */
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      /* Spacing */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-xl: 20px;
+
+      /* Transitions */
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ══════════════════════════════════════════════
+       RESET & BASE
+       ══════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 13px;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      width: 420px;
+      min-height: 560px;
+      max-height: 600px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::-webkit-scrollbar {
+      width: 5px;
+    }
+    body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    body::-webkit-scrollbar-thumb {
+      background: var(--border-default);
+      border-radius: 10px;
+    }
+
+    /* ══════════════════════════════════════════════
+       HEADER
+       ══════════════════════════════════════════════ */
+    .header {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-logo {
+      width: 32px;
+      height: 32px;
+      background: var(--pro-gradient);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(108, 92, 231, 0.3);
+    }
+
+    .header-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .header-title span {
+      background: var(--pro-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header-credits {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .credits-badge {
+      background: var(--accent-subtle);
+      border: 1px solid rgba(29, 191, 115, 0.2);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .credits-badge.exhausted {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.2);
+      color: var(--danger);
+    }
+
+    .credits-badge.pro-active {
+      background: rgba(168, 85, 247, 0.1);
+      border-color: rgba(168, 85, 247, 0.25);
+      color: #a855f7;
+    }
+
+    .credits-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    /* ══════════════════════════════════════════════
+       TAB NAVIGATION
+       ══════════════════════════════════════════════ */
+    .tab-nav {
+      display: flex;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 18px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 10px 0;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s var(--ease);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-secondary);
+    }
+
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .tab-icon {
+      font-size: 14px;
+    }
+
+    /* ══════════════════════════════════════════════
+       TAB PANELS
+       ══════════════════════════════════════════════ */
+    .tab-panel {
+      display: none;
+      padding: 16px 18px;
+      animation: fadeIn 0.3s var(--ease);
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ══════════════════════════════════════════════
+       SECTION CARDS
+       ══════════════════════════════════════════════ */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-title-icon {
+      font-size: 14px;
+    }
+
+    /* ══════════════════════════════════════════════
+       FORM CONTROLS
+       ══════════════════════════════════════════════ */
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 9px 12px;
+      background: var(--bg-input);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-family: var(--font);
+      font-size: 12px;
+      transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 80px;
+      line-height: 1.5;
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238892a6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 30px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    .input-hint {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ══════════════════════════════════════════════
+       BUTTONS
+       ══════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s var(--ease);
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 2px 12px var(--accent-glow);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: var(--accent-hover);
+      box-shadow: 0 4px 20px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .btn-pro {
+      background: var(--pro-gradient);
+      color: #fff;
+      box-shadow: 0 2px 16px rgba(168, 85, 247, 0.3);
+    }
+
+    .btn-pro:hover {
+      box-shadow: 0 4px 24px rgba(168, 85, 247, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-default);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card);
+      border-color: var(--border-focus);
+    }
+
+    .btn-danger {
+      background: rgba(239, 68, 68, 0.1);
+      color: var(--danger);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+
+    .btn-danger:hover {
+      background: rgba(239, 68, 68, 0.2);
+    }
+
+    .btn-sm {
+      padding: 7px 14px;
+      font-size: 11px;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-icon {
+      font-size: 15px;
+    }
+
+    /* ══════════════════════════════════════════════
+       SCRAPE STATUS BAR
+       ══════════════════════════════════════════════ */
+    .scrape-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: var(--bg-elevated);
+      border-radius: var(--radius-md);
+      margin-bottom: 14px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .scrape-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .scrape-status-dot.connected {
+      background: var(--success);
+      box-shadow: 0 0 8px rgba(29, 191, 115, 0.5);
+    }
+
+    .scrape-status-dot.error {
+      background: var(--danger);
+    }
+
+    .scrape-text {
+      flex: 1;
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .scrape-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .btn-scrape {
+      padding: 5px 12px;
+      font-size: 10px;
+      background: var(--accent-subtle);
+      color: var(--accent);
+      border: 1px solid rgba(29, 191, 115, 0.2);
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      white-space: nowrap;
+    }
+
+    .btn-scrape:hover {
+      background: rgba(29, 191, 115, 0.15);
+    }
+
+    /* ══════════════════════════════════════════════
+       BRIEF PREVIEW
+       ══════════════════════════════════════════════ */
+    .brief-preview {
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      margin-bottom: 14px;
+      max-height: 400px;
+      overflow-y: auto;
+      font-size: 11.5px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      display: none;
+    }
+
+    .brief-preview::-webkit-scrollbar {
+      width: 3px;
+    }
+    .brief-preview::-webkit-scrollbar-thumb {
+      background: var(--border-default);
+      border-radius: 10px;
+    }
+
+    .brief-preview.visible {
+      display: block;
+      animation: fadeIn 0.3s var(--ease);
+    }
+
+    .brief-field {
+      margin-bottom: 6px;
+    }
+
+    .brief-field-label {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    /* ══════════════════════════════════════════════
+       OUTPUT CONSOLE
+       ══════════════════════════════════════════════ */
+    .output-console {
+      background: var(--bg-input);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      min-height: 120px;
+      max-height: 240px;
+      overflow-y: auto;
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      position: relative;
+    }
+
+    .output-console::-webkit-scrollbar {
+      width: 4px;
+    }
+    .output-console::-webkit-scrollbar-thumb {
+      background: var(--border-default);
+      border-radius: 10px;
+    }
+
+    .output-placeholder {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .output-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    /* Output Section Styles */
+    .output-section {
+      margin-bottom: 6px;
+    }
+
+    .output-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .output-section-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .char-count {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .btn-copy-sm {
+      padding: 3px 10px;
+      font-size: 10px;
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      white-space: nowrap;
+    }
+
+    .btn-copy-sm:hover {
+      background: var(--bg-card);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .output-divider {
+      height: 1px;
+      background: var(--border-subtle);
+      margin: 10px 0;
+    }
+
+    /* ══════════════════════════════════════════════
+       LOADING ANIMATION
+       ══════════════════════════════════════════════ */
+    .loading-bar {
+      display: none;
+      height: 3px;
+      background: var(--bg-elevated);
+      border-radius: 2px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+
+    .loading-bar.active {
+      display: block;
+    }
+
+    .loading-bar-fill {
+      height: 100%;
+      width: 30%;
+      background: var(--pro-gradient);
+      border-radius: 2px;
+      animation: loading-slide 1.5s var(--ease) infinite;
+    }
+
+    @keyframes loading-slide {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(400%); }
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ══════════════════════════════════════════════
+       PAYWALL OVERLAY
+       ══════════════════════════════════════════════ */
+    .paywall-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      animation: fadeIn 0.3s var(--ease);
+    }
+
+    .paywall-overlay.visible {
+      display: flex;
+    }
+
+    .paywall-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      text-align: center;
+      max-width: 340px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .paywall-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--pro-gradient);
+    }
+
+    .paywall-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .paywall-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .paywall-title span {
+      background: var(--pro-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .paywall-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .paywall-features {
+      text-align: left;
+      margin-bottom: 22px;
+    }
+
+    .paywall-feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .paywall-feature-icon {
+      color: var(--accent);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .paywall-price {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      letter-spacing: -1px;
+    }
+
+    .paywall-price-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .paywall-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 18px;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+
+    .paywall-close:hover {
+      color: var(--text-primary);
+    }
+
+    /* ══════════════════════════════════════════════
+       PRO BADGE
+       ══════════════════════════════════════════════ */
+    .pro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      background: var(--pro-gradient);
+      border-radius: 10px;
+      font-size: 9px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ══════════════════════════════════════════════
+       UPGRADE BANNER (inside generator)
+       ══════════════════════════════════════════════ */
+    .upgrade-banner {
+      display: none;
+      background: linear-gradient(135deg, rgba(108, 92, 231, 0.12), rgba(168, 85, 247, 0.12));
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .upgrade-banner.visible {
+      display: block;
+    }
+
+    .upgrade-banner-text {
+      font-size: 11px;
+      color: #c4b5fd;
+      margin-bottom: 8px;
+    }
+
+    /* ══════════════════════════════════════════════
+       PROFILE PANEL — SETTINGS PANEL
+       ══════════════════════════════════════════════ */
+    .settings-section {
+      margin-bottom: 18px;
+    }
+
+    .settings-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .api-key-wrapper {
+      position: relative;
+    }
+
+    .api-key-toggle {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 2px;
+    }
+
+    .api-key-toggle:hover {
+      color: var(--text-secondary);
+    }
+
+    /* ══════════════════════════════════════════════
+       SUBSCRIPTION PANEL (in Settings)
+       ══════════════════════════════════════════════ */
+    .sub-status-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      background: var(--bg-elevated);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .sub-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .sub-icon.free {
+      background: var(--accent-subtle);
+    }
+
+    .sub-icon.pro {
+      background: var(--pro-gradient);
+    }
+
+    .sub-details {
+      flex: 1;
+    }
+
+    .sub-plan-name {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .sub-plan-info {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ══════════════════════════════════════════════
+       TOAST NOTIFICATION
+       ══════════════════════════════════════════════ */
+    .toast {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: 10px 18px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-primary);
+      z-index: 300;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .toast.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .toast-icon {
+      font-size: 16px;
+    }
+
+    /* ══════════════════════════════════════════════
+       HISTORY ITEM
+       ══════════════════════════════════════════════ */
+    .history-item {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: border-color 0.2s var(--ease);
+    }
+
+    .history-item:hover {
+      border-color: var(--accent);
+    }
+
+    .history-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .history-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-primary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 250px;
+    }
+
+    .history-date {
+      font-size: 9px;
+      color: var(--text-muted);
+    }
+
+    .history-snippet {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .history-empty {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* ══════════════════════════════════════════════
+       UTILITIES
+       ══════════════════════════════════════════════ */
+    .hidden {
+      display: none !important;
+    }
+
+    .mt-2 { margin-top: 8px; }
+    .mt-3 { margin-top: 12px; }
+    .mb-2 { margin-bottom: 8px; }
+    .text-center { text-align: center; }
+    .text-muted { color: var(--text-muted); }
+    .text-sm { font-size: 11px; }
+
+    /* ══════════════════════════════════════════════
+       AUTH UI
+       ══════════════════════════════════════════════ */
+    .auth-area {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-google-signin {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      white-space: nowrap;
+    }
+    .btn-google-signin:hover {
+      background: var(--bg-card);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .user-avatar-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      background: var(--accent-subtle);
+      border: 1px solid rgba(29, 191, 115, 0.15);
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .user-avatar-badge .dot {
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .user-avatar-badge .email-text {
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .account-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .account-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .account-email {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .account-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .account-status.free {
+      background: rgba(240, 180, 41, 0.1);
+      color: var(--warning);
+      border: 1px solid rgba(240, 180, 41, 0.2);
+    }
+    .account-status.pro {
+      background: rgba(168, 85, 247, 0.1);
+      color: #a855f7;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+    }
+    .account-actions {
+      display: flex;
+      gap: 6px;
+    }
+    .btn-account {
+      flex: 1;
+      padding: 6px 10px;
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      text-align: center;
+    }
+    .btn-account:hover {
+      background: var(--bg-card);
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+    }
+    .btn-account.danger:hover {
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+    .signin-prompt {
+      text-align: center;
+      padding: 16px;
+    }
+    .signin-prompt p {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .btn-signin-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+    }
+    .btn-signin-large:hover {
+      background: var(--bg-card);
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px var(--accent-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="header">
+    <div class="header-brand">
+      <div class="header-logo">P</div>
+      <div class="header-title">Proposal Architect <span>Pro</span></div>
+    </div>
+    <div class="auth-area">
+      <div class="credits-badge" id="credits-badge">
+        <span class="credits-dot"></span>
+        <span id="credits-text">3 / 3 Free</span>
+      </div>
+      <!-- Sign-in button (shown when not signed in) -->
+      <button class="btn-google-signin" id="btn-header-signin" title="Sign in with Google">🔑 Sign In</button>
+      <!-- User badge (shown when signed in) -->
+      <div class="user-avatar-badge" id="header-user-badge" style="display:none;">
+        <span class="dot"></span>
+        <span class="email-text" id="header-user-email"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ TAB NAVIGATION ═══════════ -->
+  <nav class="tab-nav" id="tab-nav">
+    <button class="tab-btn active" data-tab="generate">
+      <span class="tab-icon">⚡</span> Generate
+    </button>
+    <button class="tab-btn" data-tab="profile">
+      <span class="tab-icon">👤</span> Profile
+    </button>
+    <button class="tab-btn" data-tab="settings">
+      <span class="tab-icon">⚙️</span> Settings
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       TAB 1 — GENERATE
+       ═══════════════════════════════════════ -->
+  <div class="tab-panel active" id="panel-generate">
+
+    <!-- Scrape Status Bar -->
+    <div class="scrape-bar" id="scrape-bar">
+      <div class="scrape-status-dot" id="scrape-dot"></div>
+      <div class="scrape-text" id="scrape-text">Navigate to a Fiverr brief page to auto-detect</div>
+      <button class="btn-scrape" id="btn-scrape">Scrape Brief</button>
+    </div>
+
+    <!-- Brief Preview -->
+    <div class="brief-preview" id="brief-preview"></div>
+
+    <!-- Upgrade Banner (shown when credits low) -->
+    <div class="upgrade-banner" id="upgrade-banner">
+      <div class="upgrade-banner-text">⚡ You've used your free credits. Upgrade for unlimited proposals.</div>
+      <button class="btn btn-pro btn-sm" id="btn-upgrade-banner">Upgrade to Pro — $4.99/mo</button>
+    </div>
+
+    <!-- Configuration Card -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-icon">🎯</span> Proposal Configuration</div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="select-provider">AI Provider</label>
+          <select class="form-select" id="select-provider">
+            <option value="openai">OpenAI (GPT-4o-mini)</option>
+            <option value="gemini">Google Gemini (2.5 Flash Lite)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-tone">Tone</label>
+          <select class="form-select" id="select-tone">
+            <option value="professional">Professional</option>
+            <option value="friendly">Friendly</option>
+            <option value="confident">Confident</option>
+            <option value="persuasive">Persuasive</option>
+            <option value="concise">Concise</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="select-length">Length</label>
+          <select class="form-select" id="select-length">
+            <option value="short">Short (~100 words)</option>
+            <option value="medium" selected>Medium (~200 words)</option>
+            <option value="long">Long (~350 words)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="select-template">Template</label>
+          <select class="form-select" id="select-template">
+            <option value="general">General Purpose</option>
+            <option value="technical">Technical Expert</option>
+            <option value="creative">Creative Pitch</option>
+            <option value="value-prop" data-pro="true">💎 Value Proposition (Pro)</option>
+            <option value="case-study" data-pro="true">💎 Case Study (Pro)</option>
+            <option value="urgency" data-pro="true">💎 Urgency Close (Pro)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="input-custom-notes">Custom Notes (Optional)</label>
+        <textarea class="form-textarea" id="input-custom-notes" placeholder="Add specific details about your experience, portfolio links, or special instructions for the AI..." rows="3"></textarea>
+      </div>
+    </div>
+
+    <!-- Generate Button -->
+    <button class="btn btn-primary" id="btn-generate">
+      <span class="btn-icon">⚡</span>
+      <span id="btn-generate-text">Generate Proposal</span>
+    </button>
+
+    <!-- Loading Bar -->
+    <div class="loading-bar" id="loading-bar">
+      <div class="loading-bar-fill"></div>
+    </div>
+
+    <!-- Output Console -->
+    <div class="card mt-3" id="output-card" style="display: none;">
+      <!-- Intro Section -->
+      <div class="output-section">
+        <div class="output-section-header">
+          <div class="card-title"><span class="card-title-icon">👋</span> Intro</div>
+          <div class="output-section-actions">
+            <span class="char-count" id="intro-char-count"></span>
+            <button class="btn-copy-sm" id="btn-copy-intro" title="Copy Intro">📋 Copy</button>
+          </div>
+        </div>
+        <div class="output-console" id="output-intro-console">
+          <div class="output-placeholder">Your personalized intro will appear here...</div>
+        </div>
+      </div>
+
+      <div class="output-divider"></div>
+
+      <!-- Proposal Section -->
+      <div class="output-section">
+        <div class="output-section-header">
+          <div class="card-title"><span class="card-title-icon">📝</span> Proposal</div>
+          <div class="output-section-actions">
+            <span class="char-count" id="proposal-char-count"></span>
+            <button class="btn-copy-sm" id="btn-copy-proposal" title="Copy Proposal">📋 Copy</button>
+          </div>
+        </div>
+        <div class="output-console" id="output-proposal-console">
+          <div class="output-placeholder">Your AI-crafted proposal will appear here...</div>
+        </div>
+      </div>
+
+      <div class="output-actions">
+        <button class="btn btn-secondary btn-sm" id="btn-copy-all">📋 Copy All</button>
+        <button class="btn btn-secondary btn-sm" id="btn-regenerate">🔄 Regenerate</button>
+      </div>
+    </div>
+
+    <!-- History -->
+    <div class="card mt-3" id="history-card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-icon">📂</span> Recent History</div>
+      </div>
+      <div id="history-list">
+        <div class="history-empty">No proposals generated yet</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TAB 2 — PROFILE
+       ═══════════════════════════════════════ -->
+  <div class="tab-panel" id="panel-profile">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-icon">👤</span> Your Freelancer Profile</div>
+      </div>
+      <p class="text-sm text-muted mb-2">This info helps the AI craft personalized, authentic proposals.</p>
+
+      <div class="form-group">
+        <label class="form-label" for="profile-name">Display Name</label>
+        <input class="form-input" id="profile-name" type="text" placeholder="e.g. Sarah Johnson" />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="profile-title">Professional Title</label>
+        <input class="form-input" id="profile-title" type="text" placeholder="e.g. Senior Full-Stack Developer" />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="profile-skills">Key Skills</label>
+        <textarea class="form-textarea" id="profile-skills" rows="2" placeholder="e.g. React, Node.js, Python, UI/UX Design, AWS"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="profile-experience">Experience & Portfolio Highlights</label>
+        <textarea class="form-textarea" id="profile-experience" rows="3" placeholder="e.g. 8+ years experience, delivered 200+ projects, specialized in e-commerce platforms..."></textarea>
+      </div>
+
+      <button class="btn btn-primary mt-2" id="btn-save-profile">
+        <span class="btn-icon">💾</span> Save Profile
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TAB 3 — SETTINGS
+       ═══════════════════════════════════════ -->
+  <div class="tab-panel" id="panel-settings">
+
+    <!-- Subscription Status -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-icon">💳</span> Subscription</div>
+      </div>
+      <div class="sub-status-card" id="sub-status-card">
+        <div class="sub-icon free" id="sub-icon">🆓</div>
+        <div class="sub-details">
+          <div class="sub-plan-name" id="sub-plan-name">Free Plan</div>
+          <div class="sub-plan-info" id="sub-plan-info">3 proposals per month</div>
+        </div>
+      </div>
+      <button class="btn btn-pro mt-3" id="btn-upgrade-settings">
+        <span class="btn-icon">🚀</span> Upgrade to Pro — $4.99/mo
+      </button>
+      <button class="btn btn-danger btn-sm mt-2 hidden" id="btn-cancel-sub">Cancel Subscription</button>
+    </div>
+
+    <!-- Account -->
+    <div class="card" id="account-card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-icon">👤</span> Account</div>
+      </div>
+      <!-- Signed-in state -->
+      <div id="account-signed-in" style="display:none;">
+        <div class="account-info">
+          <div class="account-email" id="account-email">user@example.com</div>
+          <div class="account-status free" id="account-status">Free</div>
+        </div>
+        <div class="account-actions">
+          <button class="btn-account" id="btn-sync-status">🔄 Sync Status</button>
+          <button class="btn-account danger" id="btn-sign-out">Sign Out</button>
+        </div>
+      </div>
+      <!-- Signed-out state -->
+      <div id="account-signed-out">
+        <div class="signin-prompt">
+          <p>Sign in with your Google account to enable Pro subscriptions and sync your status across devices.</p>
+          <button class="btn-signin-large" id="btn-settings-signin">🔑 Sign in with Google</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- API Keys -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-icon">🔑</span> API Keys</div>
+      </div>
+      <p class="text-sm text-muted mb-2">Enter your own API keys. Keys are stored locally and never sent to any third party.</p>
+
+      <div class="form-group">
+        <label class="form-label" for="input-openai-key">OpenAI API Key</label>
+        <div class="api-key-wrapper">
+          <input class="form-input" id="input-openai-key" type="password" placeholder="sk-..." />
+          <button class="api-key-toggle" id="toggle-openai-key" title="Show/Hide">👁</button>
+        </div>
+        <div class="input-hint">Used for GPT-4o-mini proposals</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="input-gemini-key">Google Gemini API Key</label>
+        <div class="api-key-wrapper">
+          <input class="form-input" id="input-gemini-key" type="password" placeholder="AIza..." />
+          <button class="api-key-toggle" id="toggle-gemini-key" title="Show/Hide">👁</button>
+        </div>
+        <div class="input-hint">Used for Gemini 2.5 Flash Lite proposals</div>
+      </div>
+
+      <button class="btn btn-primary mt-2" id="btn-save-keys">
+        <span class="btn-icon">💾</span> Save API Keys
+      </button>
+    </div>
+
+    <!-- Defaults -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-icon">🎨</span> Default Settings</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="settings-language">Proposal Language</label>
+        <select class="form-select" id="settings-language">
+          <option value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+          <option value="german">German</option>
+          <option value="arabic">Arabic</option>
+          <option value="chinese">Chinese (Simplified)</option>
+          <option value="portuguese">Portuguese</option>
+        </select>
+      </div>
+      <button class="btn btn-secondary btn-sm mt-2" id="btn-save-settings">Save Defaults</button>
+    </div>
+
+    <!-- Dev Tools (hidden in production) -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span class="card-title-icon">🛠</span> Developer</div>
+      </div>
+      <div class="form-row">
+        <button class="btn btn-secondary btn-sm" id="btn-dev-reset">Reset Free Count</button>
+        <button class="btn btn-secondary btn-sm" id="btn-dev-activate">Simulate Pro</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       PAYWALL OVERLAY
+       ═══════════════════════════════════════ -->
+  <div class="paywall-overlay" id="paywall-overlay">
+    <div class="paywall-card">
+      <button class="paywall-close" id="paywall-close">✕</button>
+      <span class="paywall-icon">🚀</span>
+      <div class="paywall-title">Upgrade to <span>Pro</span></div>
+      <div class="paywall-desc">You've used all 3 free proposals this month. Unlock unlimited AI-powered proposals and premium templates.</div>
+
+      <div class="paywall-features">
+        <div class="paywall-feature">
+          <span class="paywall-feature-icon">✓</span>
+          <span>Unlimited proposal generations</span>
+        </div>
+        <div class="paywall-feature">
+          <span class="paywall-feature-icon">✓</span>
+          <span>Priority templates (Value Prop, Case Study, Urgency)</span>
+        </div>
+        <div class="paywall-feature">
+          <span class="paywall-feature-icon">✓</span>
+          <span>Advanced tone & length controls</span>
+        </div>
+        <div class="paywall-feature">
+          <span class="paywall-feature-icon">✓</span>
+          <span>Full generation history</span>
+        </div>
+      </div>
+
+      <div class="paywall-price">$4.99</div>
+      <div class="paywall-price-sub">per month · cancel anytime</div>
+
+      <button class="btn btn-pro" id="btn-paywall-upgrade">
+        <span class="btn-icon">⚡</span> Start Pro Subscription
+      </button>
+      <button class="btn btn-secondary btn-sm mt-2" id="btn-paywall-dismiss">Maybe Later</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TOAST NOTIFICATION
+       ═══════════════════════════════════════ -->
+  <div class="toast" id="toast">
+    <span class="toast-icon" id="toast-icon">✓</span>
+    <span id="toast-text">Saved successfully</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

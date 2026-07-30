@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "LinguaSub — Dual Subtitle Translator",
+  "version": "1.0.0",
+  "description": "Learn languages with interactive dual subtitles on YouTube and Netflix. Click any word for instant definitions, phonetics, and pronunciation.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.netflix.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.netflix.com/*"
+      ],
+      "css": [
+        "content/styles.css"
+      ],
+      "js": [
+        "content/tokenizer.js",
+        "content/translator.js",
+        "content/overlay.js",
+        "content/tooltip.js",
+        "content/youtubeObserver.js",
+        "content/netflixInterceptor.js",
+        "content/main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

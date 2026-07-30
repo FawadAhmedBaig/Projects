@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Warm Intro Router</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Main Menu (first screen) -->
+    <div id="menu-screen" class="screen active">
+      <header><h2>Warm Intro Router</h2></header>
+      <div class="menu-grid">
+        <button class="menu-btn" data-screen="contacts-screen">Manage Contacts</button>
+        <button class="menu-btn" data-screen="find-screen">Find Connectors</button>
+        <button class="menu-btn" data-screen="dashboard-screen">Manage Requests</button>
+      </div>
+    </div>
+
+    <!-- Manage Contacts -->
+    <div id="contacts-screen" class="screen">
+      <div class="topbar">
+        <button class="back small" data-screen="menu-screen">← Menu</button>
+        <h3>Manage Contacts</h3>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="manual">Manual Add</button>
+        <button class="tab-btn" data-tab="csv">CSV Import</button>
+      </div>
+
+      <div id="tab-manual" class="tab active">
+        <label class="field"><span class="label">Name:</span>
+          <input id="input-name" type="text" placeholder="Full name" />
+        </label>
+        <label class="field"><span class="label">Email:</span>
+          <input id="input-email" type="email" placeholder="Email" />
+        </label>
+        <label class="field"><span class="label">Company:</span>
+          <input id="input-company" type="text" placeholder="Company" />
+        </label>
+
+        <div class="field row">
+          <div style="flex:1">
+            <label class="label">Tags:</label>
+            <input id="input-tags" type="text" placeholder="tag1;tag2" />
+          </div>
+          <div style="width:140px;margin-left:8px">
+            <label class="label">Relationship Strength</label>
+            <select id="input-strength">
+              <option value="0">0 — None</option>
+              <option value="2">2 — Weak</option>
+              <option value="5" selected>5 — Neutral</option>
+              <option value="8">8 — Strong</option>
+              <option value="10">10 — Very Strong</option>
+            </select>
+          </div>
+          <button id="btn-add" class="btn-add">Add</button>
+        </div>
+      </div>
+
+      <div id="tab-csv" class="tab">
+        <div class="field">
+          <label class="label">Import CSV (name,email,company,tags,strength)</label>
+          <div class="csv-row">
+            <input id="csv" type="file" accept=".csv" style="display:none" />
+            <button id="btn-import-csv" class="btn-add">Choose CSV</button>
+            <span id="csv-filename" class="hint"></span>
+          </div>
+        </div>
+        <div class="hint">Tags semicolon-separated; header row expected.</div>
+      </div>
+
+      <hr/>
+
+      <section class="block">
+        <div class="section-header">
+          <h4>Contacts</h4>
+          <!-- <button id="btn-collapse" class="small">▾</button> -->
+        </div>
+        <div id="contacts-wrap">
+          <table id="contacts-table">
+            <thead>
+              <tr><th>Name</th><th>Email</th><th>Company</th><th>Tags</th><th>Strength</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="contacts-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Find Connectors (target + suggested connectors) -->
+    <div id="find-screen" class="screen">
+      <div class="topbar">
+        <button class="back small" data-screen="menu-screen">← Menu</button>
+        <h3>Find Connectors</h3>
+        <!-- <button id="btn-refresh-target" class="small">Refresh</button> -->
+      </div>
+
+      <section class="block">
+        <div class="card target-card">
+          <div class="card-title">Target Profile</div>
+          <div id="target-name" class="target-name">—</div>
+          <div id="target-headline" class="target-headline muted">—</div>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="card">
+          <div class="card-title">Suggested Connectors</div>
+          <div id="suggested-list">Detecting…</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Intro Request (opened from Find Connectors or chosen connector) -->
+    <div id="intro-screen" class="screen">
+      <div class="topbar">
+        <button class="back small" data-screen="find-screen">← Back to Connectors</button>
+        <h3>Intro Request</h3>
+      </div>
+
+<section class="block">
+  <div class="intro-grid">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Ask to Connector</div>
+        <button class="copy-icon" id="copy-ask" title="Copy Ask to Connector" aria-label="Copy Ask to Connector">
+          <!-- clipboard SVG -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M16 3H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V6a3 3 0 0 0-3-3z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="9" y="1" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <textarea id="ask-text"></textarea>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Forwardable</div>
+        <button class="copy-icon" id="copy-forward" title="Copy Forwardable" aria-label="Copy Forwardable">
+          <!-- clipboard SVG -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M16 3H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V6a3 3 0 0 0-3-3z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="9" y="1" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <textarea id="forward-text"></textarea>
+    </div>
+  </div>
+
+  <div class="controls row">
+    <button id="btn-send" class="primary">Save & Continue</button>
+    <select id="status-select">
+      <option>Sent</option><option>Accepted</option><option>Declined</option><option>Meeting Booked</option>
+    </select>
+  </div>
+
+  <!-- small toast for copy feedback -->
+  <div id="copy-toast" class="copy-toast" aria-live="polite" style="display:none">Copied ✓</div>
+</section>
+
+    </div>
+
+    <!-- Dashboard / Manage Requests -->
+    <div id="dashboard-screen" class="screen">
+      <div class="topbar">
+        <button class="back small" data-screen="menu-screen">← Menu</button>
+        <h3>Manage Requests</h3>
+      </div>
+
+  <section class="block">
+    <h4>Mini Dashboard</h4>
+    <div id="dashboard" class="dashboard-row">
+      <div class="dash-item">
+        <div class="dash-num" id="dash-intros">0</div>
+        <div class="dash-label">Intros Requested</div>
+      </div>
+      <div class="dash-item">
+        <div class="dash-num" id="dash-accepted">0</div>
+        <div class="dash-label">Accepted</div>
+      </div>
+      <div class="dash-item">
+        <div class="dash-num" id="dash-declined">0</div>
+        <div class="dash-label">Declined</div>
+      </div>
+      <div class="dash-item">
+        <div class="dash-num" id="dash-meetings">0</div>
+        <div class="dash-label">Meetings</div>
+      </div>
+    </div>
+  </section>
+
+
+      <section class="block">
+        <h4>Requests</h4>
+        <div id="requests-list"></div>
+      </section>
+    </div>
+
+    <!-- templates -->
+    <template id="row-tpl">
+      <tr>
+        <td class="c-name"></td>
+        <td class="c-email"></td>
+        <td class="c-company"></td>
+        <td class="c-tags"></td>
+        <td class="c-strength"></td>
+        <td class="c-actions">
+          <button class="use small">Use</button>
+          <button class="del small">Del</button>
+        </td>
+      </tr>
+    </template>
+
+    <template id="connector-row">
+      <div class="connector-row">
+        <div class="left">
+          <strong class="cname"></strong>
+          <div class="cmeta muted"></div>
+        </div>
+        <div class="right">
+          <div class="score muted small"></div>
+          <button class="draft small">Draft Intro</button>
+        </div>
+      </div>
+    </template>
+    <p>Developed by: <a href="https://www.fiverr.com/fawad8280" target="_blank">fawad8280</a></p>
+
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

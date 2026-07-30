@@ -1,0 +1,150 @@
+:root{--gap:10px;--muted:#666;--border:#e6e6e6}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;background:#fff;color:#111;font-size:13px}
+#app{padding:12px;width:100%;max-width:420px}
+
+/* Screens */
+.screen{display:none}
+.screen.active{display:block}
+.topbar{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.topbar h3{flex:1;margin:0;font-size:15px}
+.back{background:#f6f6f6;border:1px solid var(--border);padding:6px 8px;border-radius:6px;cursor:pointer}
+
+/* Main menu */
+.menu-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+.menu-btn{padding:14px;border-radius:10px;border:1px solid var(--border);background:#f8f9fb;font-weight:700;cursor:pointer}
+
+/* Tabs */
+.tabs{display:flex;gap:6px;margin-bottom:8px}
+.tab-btn{flex:1;padding:8px;background:#f6f6f6;border:1px solid var(--border);cursor:pointer}
+.tab-btn.active{background:#fff;border-bottom:2px solid #0b66c3;font-weight:600}
+.tab{display:none}
+.tab.active{display:block}
+
+/* fields */
+.field{display:block;margin-bottom:8px}
+.field .label{display:block;margin-bottom:4px;color:var(--muted);font-weight:600}
+input[type="text"], input[type="email"], select, textarea{width:100%;padding:8px;border:1px solid var(--border);border-radius:6px}
+.field.row {
+  display: flex;
+  align-items: center; /* vertically center everything */
+}
+
+.btn-add {
+  margin-left: 8px;
+  margin-top: 22px; /* adjust until aligned visually */
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.hint{color:var(--muted);font-size:12px;margin-top:6px}
+hr{border:none;border-top:1px solid var(--border);margin:12px 0}
+
+/* Contacts table */
+.block{margin-bottom:12px}
+.section-header{display:flex;align-items:center;justify-content:space-between}
+#contacts-wrap{max-height:170px;overflow:auto;border:1px solid var(--border);border-radius:6px;padding:6px;background:#fafafa}
+#contacts-table{width:100%;border-collapse:collapse}
+#contacts-table th{text-align:left;padding:6px 8px;font-weight:700;background:#fff;border-bottom:1px solid var(--border)}
+#contacts-table td{padding:8px;border-bottom:1px dashed var(--border);vertical-align:middle}
+.small{font-size:12px;padding:6px 8px;border-radius:6px}
+
+/* Intro request grid */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.card{border:1px solid var(--border);border-radius:8px;padding:8px;background:#fff;min-height:120px}
+.card-title{font-weight:700;margin-bottom:6px}
+textarea{min-height:120px;resize:vertical;padding:8px}
+
+/* connector list */
+.connector-row{display:flex;justify-content:space-between;align-items:center;padding:8px;border-bottom:1px dashed var(--border)}
+.connector-row .left{max-width:70%}
+.cmeta{font-size:12px;color:var(--muted)}
+.score{font-size:12px;margin-right:8px}
+
+.controls.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* space between button and dropdown */
+  gap: 10px;                      /* optional spacing */
+  margin-top: 10px;
+}
+
+/* make dropdown and button same height */
+#status-select {
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border, #ccc);
+  min-width: 160px;               /* fixed width so all statuses fit */
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#btn-send.primary {
+  flex-shrink: 0;                 /* prevent button from shrinking */
+}
+
+
+/* controls */
+.controls{margin-top:10px;gap:8px}
+button.primary{background:#0b66c3;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+button.secondary{background:#f6f6f6;border:1px solid var(--border);padding:8px 12px;border-radius:8px;cursor:pointer}
+
+/* dashboard */
+.dashboard-row{display:flex;gap:10px;align-items:center}
+.dash-item{flex:1;text-align:center;padding:8px;border:1px solid var(--border);border-radius:8px;background:#fafafa}
+.dash-num{font-size:18px;font-weight:700}
+.dash-label{color:var(--muted);font-size:12px}
+
+/* templates */
+.muted{color:var(--muted)}
+.csv-row{display:flex;align-items:center;gap:8px}
+#csv-filename{font-size:12px;color:var(--muted);max-width:140px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* Make selects visually consistent and avoid shrinking */
+.requests-status-select {
+  box-sizing: border-box;
+  padding: 6px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+  min-width: 90px; /* fallback */
+  white-space: nowrap;
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* card header with title and copy icon */
+.card-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.card-header .card-title { font-weight:700; font-size:13px; }
+
+/* copy icon button */
+.copy-icon {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:28px;
+  padding:4px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  background:#fff;
+  cursor:pointer;
+}
+.copy-icon svg { color:var(--muted); }
+.copy-icon:hover { background:#f6f8fb; border-color:#dcdcdc; }
+
+.copy-toast {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#0b66c3;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:13px;
+  box-shadow:0 6px 18px rgba(11,102,195,0.12);
+  z-index:9999;
+}

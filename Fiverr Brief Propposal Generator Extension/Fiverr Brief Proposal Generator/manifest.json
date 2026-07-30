@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Fiverr Brief Proposal Architect Pro",
+  "version": "1.1.0",
+  "description": "AI-powered proposal generator for Fiverr briefs. Craft winning, tailored proposals in seconds using GPT-4o-mini or Gemini 2.5 Flash Lite.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApj+perES3nDLW21QBNlo66QvRRDF4a3PMW+3T/NHf/+ZjbO9buRPHEhrZo6qP+P4UmmcSiyGbHYeCeAfssZiUzCTG7J7ERjXrbSwiwNfjWNsAxU5oevp+U3YIgYlDylfhMLctGzqoVuJM0vnNLQmqmTG0txcgrSaVhYRru/wbbR5UDB7F2yN+J59pBZfg+TemuZyTueHSM7Fuu5K96MtY6AbpaWDE6iy0qDUaEaDjdLk5eu8vaW/DhoakRnBUMpd1Zet2AH3JTo5euv3r7e/3mhXM3vVAn2q0P9sDTW+9vqIw3x94O7WPyR74xOvrKQh3TiAycH/9tQv0tUQDoxtQQIDAQAB",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "alarms",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://www.fiverr.com/*",
+    "https://api.openai.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://www.googleapis.com/*",
+    "https://accounts.google.com/*",
+    "https://oauth2.googleapis.com/*",
+    "https://fiverrproposalarchitect.vercel.app/*"
+  ],
+  "oauth2": {
+    "client_id": "153016882193-7da66cv92li5r6iuujbm0b3kjgdapod2.apps.googleusercontent.com",
+    "scopes": ["openid", "email", "profile"]
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.fiverr.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}

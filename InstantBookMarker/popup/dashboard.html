@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarker Dashboard</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --event-bg: #fee2e2;
+      --event-text: #991b1b;
+      --task-bg: #dbeafe;
+      --task-text: #1e40af;
+      --border: #e2e8f0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: var(--bg);
+      margin: 0;
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 40px 20px;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    h1 { font-size: 1.8rem; font-weight: 700; margin: 0; }
+
+    /* Top 3 Section */
+    .top-three {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+    .top-three h2 { 
+      font-size: 0.9rem; 
+      text-transform: uppercase; 
+      letter-spacing: 0.05em; 
+      color: var(--text-muted);
+      margin-top: 0;
+    }
+    #top3-list { list-style: none; padding: 0; margin: 0; }
+    .top3-item {
+      background: white;
+      margin-bottom: 8px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      transition: transform 0.2s;
+    }
+    .top3-item:hover { transform: translateY(-2px); }
+
+    /* Calendar Controls */
+    #calendarHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    #monthYear { font-weight: 600; font-size: 1.2rem; }
+    .nav-btn {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover { background: #f8fafc; border-color: var(--primary); }
+
+    /* Calendar Grid */
+    .calendar { width: 100%; border-spacing: 0; border-collapse: separate; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .calendar th { background: #f8fafc; padding: 12px; font-size: 0.8rem; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--border); }
+    .calendar td { width: 14.2%; height: 110px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); vertical-align: top; padding: 8px; }
+    .calendar td:last-child { border-right: none; }
+    .date-label { font-weight: 600; font-size: 0.85rem; margin-bottom: 6px; display: block; }
+
+    /* Action Buttons Styles */
+    .btn-icon {
+      border: none;
+      background: none;
+      padding: 4px;
+      border-radius: 4px;
+      opacity: 0.6;
+      transition: 0.2s;
+    }
+    .btn-icon:hover { opacity: 1; background: #eee; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dashboard</h1>
+    </header>
+
+    <section class="top-three">
+      <h2>Focus for Today</h2>
+      <ul id="top3-list">
+        </ul>
+    </section>
+
+    <div id="calendarHeader">
+      <span id="monthYear"></span>
+      <div>
+        <button id="prevMonth" class="nav-btn">←</button>
+        <button id="nextMonth" class="nav-btn">→</button>
+      </div>
+    </div>
+
+    <table class="calendar">
+      <thead>
+        <tr>
+          <th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
+        </tr>
+      </thead>
+      <tbody id="calendarBody"></tbody>
+    </table>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
